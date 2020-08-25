@@ -1,6 +1,8 @@
 package main
 
 import (
+	"asf_server/config"
+	"asf_server/middleware"
 	"asf_server/service"
 	"asf_server/token"
 	"github.com/gin-gonic/gin"
@@ -10,17 +12,11 @@ import (
 
 var tokens token.Tokens
 
-func TokenMiddleware(t token.Tokens) gin.HandlerFunc {
-	return func(c *gin.Context) {
-		c.Set("tokens", t)
-		c.Next()
-	}
-}
-
 func main() {
 	tokens = make(token.Tokens)
 	r := gin.Default()
-	r.Use(TokenMiddleware(tokens))
+	r.Use(middleware.ConfigMiddleware(config.GetConfig("config.ini")))
+	r.Use(middleware.TokenMiddleware(tokens))
 
 	r.LoadHTMLGlob("templates/*")
 	r.StaticFS("/static/highlight", http.Dir("static/highlight"))

@@ -1,6 +1,7 @@
 package service
 
 import (
+	"asf_server/config"
 	"bytes"
 	"github.com/gin-gonic/gin"
 	"github.com/hpcloud/tail"
@@ -8,7 +9,8 @@ import (
 )
 
 func GetLogPage(c *gin.Context) {
-	t, _ := tail.TailFile("log.txt", tail.Config{Follow: false, MaxLineSize:10})
+	cfg := c.MustGet("config").(config.Config)
+	t, _ := tail.TailFile(cfg.AsfLogPath, tail.Config{Follow: false, MaxLineSize: 10})
 	var b bytes.Buffer
 	for line := range t.Lines {
 		b.WriteString(line.Text)
