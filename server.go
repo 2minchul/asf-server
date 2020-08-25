@@ -49,6 +49,5 @@ func main() {
 		})
 	})
 
-	log.Println("http://127.0.0.1:8080")
-	log.Fatal(r.Run("127.0.0.1:8080"))
+	log.Fatal(r.Run("0.0.0.0:1022"))
 }
