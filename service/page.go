@@ -14,6 +14,7 @@ func GetLogPage(c *gin.Context) {
 	var b bytes.Buffer
 	for line := range t.Lines {
 		b.WriteString(line.Text)
+		b.WriteByte('\n')
 	}
 	c.HTML(http.StatusOK, "log.html", gin.H{
 		"text": b.String(),
