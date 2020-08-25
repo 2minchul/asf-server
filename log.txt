@@ -1,0 +1,19 @@
+2020-08-25 09:10:41|ArchiSteamFarm-369|INFO|mainAccount|FarmSolo() Now idling: 427290 (Vampyr)
+2020-08-25 09:10:42|ArchiSteamFarm-369|INFO|mainAccount|ShouldFarm() Idling status for 427290 (Vampyr): 5 cards remaining
+2020-08-25 09:10:42|ArchiSteamFarm-369|INFO|mainAccount|FarmCards() Still idling: 427290 (Vampyr)
+2020-08-25 09:25:53|ArchiSteamFarm-369|INFO|mainAccount|ShouldFarm() Idling status for 427290 (Vampyr): 5 cards remaining
+2020-08-25 09:25:53|ArchiSteamFarm-369|INFO|mainAccount|FarmCards() Still idling: 427290 (Vampyr)
+2020-08-25 09:41:04|ArchiSteamFarm-369|INFO|mainAccount|ShouldFarm() Idling status for 427290 (Vampyr): 5 cards remaining
+2020-08-25 09:41:04|ArchiSteamFarm-369|INFO|mainAccount|FarmCards() Still idling: 427290 (Vampyr)
+2020-08-25 09:41:13|ArchiSteamFarm-369|INFO|mainAccount|ShouldFarm() Idling status for 427290 (Vampyr): 4 cards remaining
+2020-08-25 09:41:13|ArchiSteamFarm-369|INFO|mainAccount|FarmCards() Still idling: 427290 (Vampyr)
+2020-08-25 09:56:24|ArchiSteamFarm-369|INFO|mainAccount|ShouldFarm() Idling status for 427290 (Vampyr): 4 cards remaining
+2020-08-25 09:56:24|ArchiSteamFarm-369|INFO|mainAccount|FarmCards() Still idling: 427290 (Vampyr)
+2020-08-25 10:11:28|ArchiSteamFarm-369|INFO|mainAccount|ShouldFarm() Idling status for 427290 (Vampyr): 3 cards remaining
+2020-08-25 10:11:28|ArchiSteamFarm-369|INFO|mainAccount|FarmCards() Still idling: 427290 (Vampyr)
+2020-08-25 10:26:39|ArchiSteamFarm-369|INFO|mainAccount|ShouldFarm() Idling status for 427290 (Vampyr): 3 cards remaining
+2020-08-25 10:26:39|ArchiSteamFarm-369|INFO|mainAccount|FarmCards() Still idling: 427290 (Vampyr)
+2020-08-25 10:41:39|ArchiSteamFarm-369|INFO|mainAccount|ShouldFarm() Idling status for 427290 (Vampyr): 2 cards remaining
+2020-08-25 10:41:39|ArchiSteamFarm-369|INFO|mainAccount|FarmCards() Still idling: 427290 (Vampyr)
+2020-08-25 10:56:50|ArchiSteamFarm-369|INFO|mainAccount|ShouldFarm() Idling status for 427290 (Vampyr): 2 cards remaining
+2020-08-25 10:56:50|ArchiSteamFarm-369|INFO|mainAccount|FarmCards() Still idling: 427290 (Vampyr)

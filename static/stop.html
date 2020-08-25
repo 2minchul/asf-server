@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/axios.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    async function stopAsf() {
+        const tokenRes = await axios.post('/api/token')
+
+        const params = new URLSearchParams();
+        params.append('token', tokenRes.data['token']);
+        const RunRes = await axios.post('/api/stop', params)
+        if (RunRes.data.status === "ok") {
+            window.location.href = '/log';
+        }
+    }
+
+    if (confirm('Stop ASF?')) {
+        stopAsf()
+    }
+</script>
+</body>
+</html>
