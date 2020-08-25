@@ -2,21 +2,24 @@ package service
 
 import (
 	"asf_server/config"
-	"bytes"
 	"github.com/gin-gonic/gin"
 	"github.com/hpcloud/tail"
 	"net/http"
+	"strings"
 )
 
 func GetLogPage(c *gin.Context) {
 	cfg := c.MustGet("config").(config.Config)
 	t, _ := tail.TailFile(cfg.AsfLogPath, tail.Config{Follow: false})
-	var b bytes.Buffer
+	var lines = make([]string, 0, 10)
 	for line := range t.Lines {
-		b.WriteString(line.Text)
-		b.WriteByte('\n')
+		lines = append(lines, line.Text)
 	}
+	if 10 < len(lines) {
+		lines = lines[len(lines)-10:]
+	}
+
 	c.HTML(http.StatusOK, "log.html", gin.H{
-		"text": b.String(),
+		"text": strings.Join(lines, "\n"),
 	})
 }
