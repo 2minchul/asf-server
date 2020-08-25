@@ -10,7 +10,7 @@ import (
 
 func GetLogPage(c *gin.Context) {
 	cfg := c.MustGet("config").(config.Config)
-	t, _ := tail.TailFile(cfg.AsfLogPath, tail.Config{Follow: false, MaxLineSize: 10})
+	t, _ := tail.TailFile(cfg.AsfLogPath, tail.Config{Follow: false})
 	var b bytes.Buffer
 	for line := range t.Lines {
 		b.WriteString(line.Text)
