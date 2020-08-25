@@ -7,10 +7,10 @@ import (
 
 func StartAsf() {
 	log.Println("start asf")
-	_, _ = exec.LookPath("systemctl start asf")
+	_, _ = exec.Command("systemctl start asf").Output()
 }
 
 func StopAsf() {
 	log.Println("stop asf")
-	_, _ = exec.LookPath("systemctl stop asf")
+	_, _ = exec.Command("systemctl stop asf").Output()
 }
